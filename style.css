@@ -1,0 +1,17 @@
+.square{
+    background: green;
+    border: 1px solid white;
+    flex: 1;
+}
+
+.row{
+    display: flex;
+    height: 100px;
+}
+
+#sketchPad{
+    display: flex;
+    flex-direction: column;
+    width: 500px;    
+    height: 500px;
+}
