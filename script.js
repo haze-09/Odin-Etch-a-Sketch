@@ -13,7 +13,8 @@ let rows= document.querySelectorAll('.row');
 for(row of rows){    
     for (let i=0;i<n;i++){  
         var square = document.createElement('div');
-        square.classList.add('square');      
+        square.classList.add('square');
+        square.style.setProperty('--square_opacity', '0');
         row.appendChild(square);
     };
     
@@ -22,13 +23,13 @@ for(row of rows){
 let pixels = document.querySelectorAll('.square');
 
 function incrementOpacity(){
-    const currOpacityString = this.style.getPropertyValue("--square_opacity");
-    const currOpacity = currOpacityString ? parseFloat(currOpacityString) : 0;
-    const opacity = Math.min(+currOpacity + 0.1, 1);    
+    const currOpacity = parseFloat(this.style.getPropertyValue("--square_opacity"));
+    const opacity = Math.min(currOpacity + 0.1, 1);
     this.style.setProperty("--square_opacity", opacity);
 }
 const greyscale=document.querySelector('#greyscale');
 const rainbow = document.querySelector('#rainbow');
+const clear = document.querySelector('#clear')
 
 greyscale.addEventListener('click',()=>{
     for(pixel of pixels){
@@ -38,8 +39,15 @@ greyscale.addEventListener('click',()=>{
 
 rainbow.addEventListener('click',()=>{
     for(pixel of pixels){
-        
+
     }
+})
+
+clear.addEventListener('click',()=>{
+    for(pixel of pixels){
+        pixel.style.setProperty("--square_opacity",'0');
+    }
+
 })
 
 for(pixel of pixels){

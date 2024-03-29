@@ -1,8 +1,9 @@
 .square{
-    background: var(--square_color,rgb(255, 0, 0));
+    background: var(--square_color,rgb(0, 0, 0));
     flex: 1;
-    opacity: var(--square_opacity,0);
+    opacity: var(--square_opacity);
 }
+
 
 
 .row{
