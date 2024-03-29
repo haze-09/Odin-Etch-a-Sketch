@@ -1,17 +1,28 @@
 .square{
-    background: green;
-    border: 1px solid white;
+    background: var(--square_color,rgb(255, 0, 0));
     flex: 1;
+    opacity: var(--square_opacity,0);
 }
+
 
 .row{
     display: flex;
-    height: 100px;
+    flex: 1;
 }
 
 #sketchPad{
     display: flex;
     flex-direction: column;
-    width: 500px;    
-    height: 500px;
+    width: 75vh;    
+    height: 75vh;
+    border: 2px solid;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
