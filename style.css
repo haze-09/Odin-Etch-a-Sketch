@@ -1,7 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
 .square{
     background: var(--square_color,rgb(0, 0, 0));
     flex: 1;
     opacity: var(--square_opacity);
+}
+
+p{
+    border: 2px solid;
+    padding: 20px;
+    background: #ebebeb;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: larger;
 }
 
 
@@ -12,12 +25,21 @@
 }
 
 #sketchPad{
+
     display: flex;
     flex-direction: column;
     width: 75vh;    
     height: 75vh;
     border: 2px solid;
+    margin:20px 0;
+
+    background: rgba( 255, 255, 255, 0.3 );
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur( 10px );
+    -webkit-backdrop-filter: blur(10px );
+    border-radius: 10px;
 }
+
 
 body{
     display: flex;
@@ -26,4 +48,40 @@ body{
     align-items: center;
     height: 100vh;
     margin: 0;
+    font-family: "Poppins", sans-serif;
+    background-image: linear-gradient(135deg, #ebebeb 25%, transparent 25%),
+    linear-gradient(225deg, #ebebeb 25%, transparent 25%),
+    linear-gradient(45deg, #ebebeb 25%, transparent 25%),
+    linear-gradient(315deg, #ebebeb 25%, #ffffff 25%);
+    background-position: 10px 0, 10px 0, 0 0, 0 0;
+    background-size: 20px 20px;
+    background-repeat: repeat;
+}
+
+#buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+#heading{
+    margin: 0;
+}
+
+button{
+    font-family: "Poppins", sans-serif;
+    background: #515151;
+    border: none;
+    color: rgb(245, 245, 245);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+input{
+    font-family: "Poppins", sans-serif;
+    border: none;
+    background: none;
+    border-bottom: 2px solid;
+    text-align: center;
+    outline: none;
+
 }
